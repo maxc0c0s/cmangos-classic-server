@@ -24,7 +24,7 @@ fi
 if [ -z $@ ]; then
   for script in $(ls -A $STARTUP_SCRIPTS_DIR); do
     case "$script" in
-      *.sh)  echo "$0: running $script"; . $STARTUP_SCRIPTS_DIR/"$script" "$BINARY_DIR";;
+      *.sh)  echo "$0: running $script"; . $STARTUP_SCRIPTS_DIR/"$script" "$BINARY_DIR" "$TEMP_DIR";;
       *)  echo "$0: ignoring $script";;
     esac
   done
