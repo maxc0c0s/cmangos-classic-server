@@ -8,7 +8,7 @@ fi
 
 TEMP_DIR="/tmp"
 BINARY_PACKAGE="$TEMP_DIR/cmangos-classic-$CMANGOS_VERSION.tar.gz"
-BINARY_DIR="/cmangos/bin"
+BINARY_DIR="$LOCAL_BIN/cmangos/bin"
 
 if [ ! -d $BINARY_DIR ]
 then
@@ -18,7 +18,7 @@ then
   fi
 
   echo "extracting $BINARY_PACKAGE"
-  tar -xf $BINARY_PACKAGE -C /
+  tar -xf $BINARY_PACKAGE -C $LOCAL_BIN
 fi
 
 if [ -z $@ ]; then
